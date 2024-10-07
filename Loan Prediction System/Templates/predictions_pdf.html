@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Predictions List</title>
+</head>
+<body>
+    <h1>Predictions List</h1>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>User Name</th>
+            <th>Applicant Income</th>
+            <th>Coapplicant Income</th>
+            <th>Loan Amount</th>
+            <th>Loan Amount Term</th>
+            <th>Credit History</th>
+            <th>Prediction</th>
+            <th>Accuracy</th>
+            <th>Created At</th>
+        </tr>
+        {% for pred in predictions %}
+        <tr>
+            <td>{{ pred[0] }}</td>
+            <td>{{ pred[10] }}</td>
+            <td>{{ pred[1] }}</td>
+            <td>{{ pred[2] }}</td>
+            <td>{{ pred[3] }}</td>
+            <td>{{ pred[4] }}</td>
+            <td>{{ pred[5] }}</td>
+            <td>{{ pred[7] }}</td>
+            <td>{{ pred[8] }}</td>
+            <td>{{ pred[9] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

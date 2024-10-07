@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Admin Registration Form</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/static/css/navbar.css">
+  <link rel="stylesheet" href="/static/css/footer.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f6f9;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 50vh;
+      
+    }
+
+    .main-content {
+      
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-grow: 1;
+    }
+
+    .container {
+      background-color: #ffffff;
+      padding: 50px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      width: 400px;
+      max-width: 80%;
+      margin-top:30px;
+      margin-bottom:30px;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #333333;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      color: #333333;
+      font-weight: bold;
+    }
+
+    .form_control {
+      width: 100%;
+      padding: 7px;
+      border: 1px solid #ced4da;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+
+    .form_control:focus {
+      border-color: #495057;
+      box-shadow: 0 0 5px rgba(73, 80, 87, 0.2);
+    }
+
+    .btn {
+      width: 100%;
+      padding: 12px;
+      background-color: #343a40;
+      color: #ffffff;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #495057;
+    }
+
+    .class-danger {
+      color: #dc3545;
+      margin-top: 5px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+{% include 'navbar.html' %}
+  <div class="main-content">
+    <div class="container w-25">
+      <h2>Admin Registration Form</h2>
+      <form action="/admin_register" method="POST">
+        {{ form.hidden_tag() }}
+
+        <div class="form-group">
+          {{ form.name.label(for="name") }}</br>
+          {{ form.name(id="name", class="form_control") }}
+          {% if form.name.errors %}
+            <ul class="class-danger">
+              {% for error in form.name.errors %}
+                <li>{{ error }}</li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </div>
+
+        <div class="form-group">
+          {{ form.username.label(for="username") }}</br>
+          {{ form.username(id="username", class="form_control") }}
+          {% if form.username.errors %}
+            <ul class="class-danger">
+              {% for error in form.username.errors %}
+                <li>{{ error }}</li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </div>
+
+        <div class="form-group">
+          {{ form.password.label(for="password") }}</br>
+          {{ form.password(id="password", class="form_control") }}
+          {% if form.password.errors %}
+            <ul class="class-danger">
+              {% for error in form.password.errors %}
+                <li>{{ error }}</li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </div>
+    
+        {{ form.submit(class="btn btn-dark mt-4") }}
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
+
+ 
+

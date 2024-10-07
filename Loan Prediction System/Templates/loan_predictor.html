@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Eligibility Prediction</title>
+    <link rel="stylesheet" href="/static/css/navbar.css">
+    <link rel="stylesheet" href="/static/css/footer.css">
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0;margin-left:50px;
+            padding-left:250px;  }
+        .container { max-width: 700px; margin: auto; }
+        h2 { color: #333; padding-left:250px; }
+        form { background: #f4f4f4; padding-left: 250px; border-radius: 7px; }
+        label { display: inline-block; width: 200px; margin-bottom: 10px; }
+        input[type="number"], select { width: 200px; padding: 5px; margin-bottom: 10px; }
+        input[type="submit"] { background: #333; color: #fff; padding: 10px 15px; border: none; cursor: pointer; }
+        input[type="submit"]:hover { background: #555; }
+        .result { margin-top: 20px; padding:20px; padding-left: 250px; background: #e8e8e8; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    {% include 'navbar.html' %}
+    {% include 'sidebar.html' %}
+    
+    <div class="container">
+        <h2>Loan Eligibility Prediction</h2>
+        <form action="{{ url_for('predict') }}" method="post">
+            <label for="Gender">Gender:</label>
+            <select name="Gender" required>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select><br>
+            
+            <label for="Married">Married:</label>
+            <select name="Married" required>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select><br>
+            
+            <label for="Dependents">Dependents:</label>
+            <select name="Dependents" required>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3+">3+</option>
+            </select><br>
+            
+            <label for="Education">Education:</label>
+            <select name="Education" required>
+                <option value="Graduate">Graduate</option>
+                <option value="Not Graduate">Not Graduate</option>
+            </select><br>
+            
+            <label for="Self_Employed">Self Employed:</label>
+            <select name="Self_Employed" required>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select><br>
+            
+            <label for="ApplicantIncome">Applicant Income:</label>
+            <input type="number" name="ApplicantIncome" placeholder="Enter your income" required><br>
+            
+            <label for="CoapplicantIncome">Coapplicant Income:</label>
+            <input type="number" name="CoapplicantIncome" placeholder="Enter your Coapplicant income" required><br>
+            
+            <label for="LoanAmount">Loan Amount:</label>
+            <input type="number" name="LoanAmount" placeholder="Enter Loan Amount" required><br>
+            
+            <label for="Loan_Amount_Term">Loan Amount Term:</label>
+            <input type="number" name="Loan_Amount_Term" placeholder="Enter loan amount term in days" required><br>
+            
+            <label for="Credit_History">Credit History:</label>
+            <select name="Credit_History" required>
+                <option value="1">1 (Good)</option>
+                <option value="0">0 (Bad)</option>
+            </select><br>
+            
+            <label for="Property_Area">Property Area:</label>
+            <select name="Property_Area" required>
+                <option value="Urban">Urban</option>
+                <option value="Semiurban">Semiurban</option>
+                <option value="Rural">Rural</option>
+            </select><br>
+            
+            <input type="submit" value="Predict">
+        </form>
+        
+        {% if prediction_text %}
+        <div class="result">
+            <h3>{{ prediction_text }}</h3>
+        
+            <!-- Display the prediction probability graph -->
+            <img src="{{ graph_url }}" alt="Prediction Graph" style="max-width:100%; height:auto;">
+        
+            <!-- Show detailed predicted value -->
+            {% if predicted_value is not none %}
+                <p>Predicted Probability: {{ predicted_value }}</p>
+            {% endif %}
+        
+            <!-- SHAP Contributions -->
+            {% if shap_contributions %}
+            <h4>SHAP Feature Contributions:</h4>
+            <table border="1" cellpadding="10" cellspacing="0">
+                <tr>
+                    <th>Feature</th>
+                    <th>SHAP Value (Contribution)</th>
+                </tr>
+                {% for feature, shap_value in shap_contributions.items() %}
+                <tr>
+                    <td>{{ feature }}</td>
+                    <td>{{ shap_value }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+            {% else %}
+            <p>Feature contributions could not be calculated.</p>
+            {% endif %}
+        </div>        
+        
+        {% endif %}
+    </div>
+    
+</body>
+</html>

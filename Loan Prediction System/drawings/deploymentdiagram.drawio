@@ -1,0 +1,58 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.5 Chrome/126.0.6478.183 Electron/31.3.0 Safari/537.36" version="24.7.5">
+  <diagram name="Page-1" id="5f0bae14-7c28-e335-631c-24af17079c00">
+    <mxGraphModel dx="880" dy="1374" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="39150e848f15840c-1" value="" style="verticalAlign=top;align=left;spacingTop=8;spacingLeft=2;spacingRight=12;shape=cube;size=10;direction=south;fontStyle=4;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12" parent="1" vertex="1">
+          <mxGeometry x="120" y="70" width="330" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="39150e848f15840c-2" value="" style="verticalAlign=top;align=left;spacingTop=8;spacingLeft=2;spacingRight=12;shape=cube;size=10;direction=south;fontStyle=4;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12" parent="1" vertex="1">
+          <mxGeometry x="788" y="-67" width="330" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="39150e848f15840c-4" value="«Device»&lt;br&gt;&lt;b&gt;Web App&lt;/b&gt;" style="html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;" parent="1" vertex="1">
+          <mxGeometry x="190" y="100" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="39150e848f15840c-8" value="«Device»&lt;br&gt;&lt;b&gt;Server&lt;/b&gt;" style="html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;" parent="1" vertex="1">
+          <mxGeometry x="888" y="-37" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="qxnzz1GjnKSUkPj9Vmtr-1" value="«Artifact»&lt;br&gt;&lt;b&gt;Loan Eligibility Prediction System&lt;/b&gt;" style="html=1;dropTarget=0;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="140" y="170" width="280" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="qxnzz1GjnKSUkPj9Vmtr-2" value="" style="shape=module;jettyWidth=8;jettyHeight=4;" parent="qxnzz1GjnKSUkPj9Vmtr-1" vertex="1">
+          <mxGeometry x="1" width="51" height="30" relative="1" as="geometry">
+            <mxPoint x="-58" y="7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qxnzz1GjnKSUkPj9Vmtr-3" value="«Artifact»&lt;br&gt;&lt;b&gt;Backend Server(Flask)&lt;/b&gt;" style="html=1;dropTarget=0;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="803" y="23" width="280" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="qxnzz1GjnKSUkPj9Vmtr-4" value="" style="shape=module;jettyWidth=8;jettyHeight=4;" parent="qxnzz1GjnKSUkPj9Vmtr-3" vertex="1">
+          <mxGeometry x="1" width="41" height="20" relative="1" as="geometry">
+            <mxPoint x="-48" y="7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qxnzz1GjnKSUkPj9Vmtr-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=105;exitDy=0;exitPerimeter=0;entryX=0;entryY=0;entryDx=115;entryDy=330;entryPerimeter=0;" parent="1" source="39150e848f15840c-1" target="39150e848f15840c-2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qxnzz1GjnKSUkPj9Vmtr-6" value="" style="verticalAlign=top;align=left;spacingTop=8;spacingLeft=2;spacingRight=12;shape=cube;size=10;direction=south;fontStyle=4;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12" parent="1" vertex="1">
+          <mxGeometry x="778" y="380" width="330" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="qxnzz1GjnKSUkPj9Vmtr-7" value="«Device»&lt;br&gt;&lt;b&gt;Database&lt;/b&gt;" style="html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;" parent="1" vertex="1">
+          <mxGeometry x="903" y="410" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="qxnzz1GjnKSUkPj9Vmtr-8" value="«Artifact»&lt;br&gt;&lt;b&gt;Database Server(MYSQL)&lt;/b&gt;" style="html=1;dropTarget=0;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="803" y="470" width="280" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="qxnzz1GjnKSUkPj9Vmtr-9" value="" style="shape=module;jettyWidth=8;jettyHeight=4;" parent="qxnzz1GjnKSUkPj9Vmtr-8" vertex="1">
+          <mxGeometry x="1" width="41" height="20" relative="1" as="geometry">
+            <mxPoint x="-48" y="7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qxnzz1GjnKSUkPj9Vmtr-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=220;exitDy=170;exitPerimeter=0;entryX=0;entryY=0;entryDx=0;entryDy=160;entryPerimeter=0;" parent="1" source="39150e848f15840c-2" target="qxnzz1GjnKSUkPj9Vmtr-6" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

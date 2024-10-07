@@ -1,0 +1,19 @@
+{% extends "baseadmin.html" %}
+{% block content %}
+<div class="admin-container">
+    {% include 'admin_sidebar.html' %}
+    <div class="main-content">
+        <h1>Welcome, Admin!</h1>
+        <div class="dashboard-stats">
+            <div class="stat-card">
+                <h2>Total Users</h2>
+                <p class="stat-number">{{ total_users }}</p>
+            </div>
+            <div class="stat-card">
+                <h2>Total Loan Predictions</h2>
+                <p class="stat-number">{{ total_predictions }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

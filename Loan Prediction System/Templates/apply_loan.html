@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container mt-5">
+    <h2>Loan Application</h2>
+    <form method="POST" action="">
+        {{ form.hidden_tag() }}
+        <div class="form-group">
+            {{ form.amount.label(class="form-control-label") }}
+            {{ form.amount(class="form-control") }}
+            {% if form.amount.errors %}
+    <div class="invalid-feedback">
+        {% for error in form.amount.errors %}
+            <span>{{ error }}</span>
+        {% endfor %}
+    </div>
+{% endif %}
+            
+        </div>
+        <div class="form-group">
+            {{ form.term.label(class="form-control-label") }}
+            {{ form.term(class="form-control") }}
+            {% if form.term.errors %}
+    <div class="invalid-feedback">
+        {% for error in form.term.errors %}
+            <span>{{ error }}</span>
+        {% endfor %}
+    </div>
+{% endif %}
+        </div>
+        <div class="form-group">
+            {{ form.purpose.label(class="form-control-label") }}
+            {{ form.purpose(class="form-control") }}
+
+            {% if form.purpose.errors %}
+    <div class="invalid-feedback">
+        {% for error in form.purpose.errors %}
+            <span>{{ error }}</span>
+        {% endfor %}
+    </div>
+{% endif %}
+        </div>
+        <div class="form-group">
+            {{ form.employment_status.label(class="form-control-label") }}
+            {{ form.employment_status(class="form-control") }}
+            {% if form.employment_status.errors %}
+                <div class="invalid-feedback">
+                    {% for error in form.employee_status.errors %}
+                    <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+        <div class="form-group">
+            {{ form.annual_income.label(class="form-control-label") }}
+            {{ form.annual_income(class="form-control") }}
+            {% if form.annual_income.errors %}
+                <div class="invalid-feedback">
+                    {% for error in form.annual_income.errors %}
+                    <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+        <div class="form-group">
+            {{ form.credit_score.label(class="form-control-label") }}
+            {{ form.credit_score(class="form-control") }}
+            {% if form.credit_score.errors %}
+                <div class="invalid-feedback">
+                    {% for error in form.credit_score.errors %}
+                    <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+        <div class="form-group">
+            {{ form.existing_debts.label(class="form-control-label") }}
+            {{ form.existing_debts(class="form-control") }}
+            {% if form.existing_debts.errors %}
+                <div class="invalid-feedback">
+                    {% for error in form.existing_debts.errors %}
+                    <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+            {% endif %}
+            
+        </div>
+        <div class="form-group">
+            {{ form.submit(class="btn btn-primary") }}
+            {% if form.submit.errors %}
+                <div class="invalid-feedback">
+                    {% for error in form.submit.errors %}
+                    <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+    </form>
+</div>
+{% endblock content %}

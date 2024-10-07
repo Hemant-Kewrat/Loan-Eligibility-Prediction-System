@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Update Prediction{% endblock %}
+
+{% block content %}
+<h2>Update Prediction</h2>
+<form method="post">
+    <div class="form-group">
+        <label for="ApplicantIncome">Applicant Income</label>
+        <input type="number" step="0.01" class="form-control" id="ApplicantIncome" name="ApplicantIncome" value="{{ prediction[2] }}" required>
+    </div>
+    <div class="form-group">
+        <label for="CoapplicantIncome">Coapplicant Income</label>
+        <input type="number" step="0.01" class="form-control" id="CoapplicantIncome" name="CoapplicantIncome" value="{{ prediction[3] }}" required>
+    </div>
+    <div class="form-group">
+        <label for="LoanAmount">Loan Amount</label>
+        <input type="number" step="0.01" class="form-control" id="LoanAmount" name="LoanAmount" value="{{ prediction[4] }}" required>
+    </div>
+    <div class="form-group">
+        <label for="Loan_Amount_Term">Loan Amount Term</label>
+        <input type="number" step="1" class="form-control" id="Loan_Amount_Term" name="Loan_Amount_Term" value="{{ prediction[5] }}" required>
+    </div>
+    <div class="form-group">
+        <label for="Credit_History">Credit History</label>
+        <input type="number" step="0.1" class="form-control" id="Credit_History" name="Credit_History" value="{{ prediction[6] }}" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Update Prediction</button>
+</form>
+{% endblock %}

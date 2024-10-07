@@ -1,0 +1,51 @@
+
+.welcome-container {
+    margin-top: 80px;
+    text-align: center;
+}
+
+#welcome-message {
+    animation: typing 4s steps(40, end), blink-caret .75s step-end infinite;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-size: 30px;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Typing animation */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+/* Blinking cursor */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: black; }
+}
+
+.article-container {
+    margin-top: 120px;
+}
+
+.article-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px 0;
+}
+.article-box {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    width: 30%;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+}
+.article-box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+.article-box p {
+    font-size: 1rem;
+    line-height: 2.6;
+}
